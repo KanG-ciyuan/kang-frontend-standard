@@ -1,0 +1,14 @@
+{
+  "cases": [
+    {"prompt": "从零设计一个 AI 产品官网，并先出 6 套可视化风格让我选", "should_trigger": true},
+    {"prompt": "把现有 Dashboard 做一次视觉重构，增加更自然的动态效果", "should_trigger": true},
+    {"prompt": "先给我的装修咨询产品做 4 套高保真视觉方向，要求真实参考、全尺寸预览并说明动态逻辑", "should_trigger": true},
+    {"prompt": "参考成熟的开源前端案例设计一个新产品页面，不要把完整页面压成缩略图", "should_trigger": true},
+    {"prompt": "在不降低页面质量的前提下，减少不必要的依赖和 Token 消耗，并完成响应式与性能检查", "should_trigger": true},
+    {"prompt": "参考的开源设计站点打不开了，请继续找可靠替代来源，不要凭记忆声称已经借鉴", "should_trigger": true},
+    {"prompt": "这个页面有入场动画，请在动效结束后截取最终状态，同时单独检查动态过程", "should_trigger": true},
+    {"prompt": "把这个页面的按钮颜色改成绿色", "should_trigger": true},
+    {"prompt": "生成一张装修风格海报", "should_trigger": false},
+    {"prompt": "修复一个 Node.js 接口的错误码判断", "should_trigger": false}
+  ]
+}

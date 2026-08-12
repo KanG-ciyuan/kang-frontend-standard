@@ -1,0 +1,4 @@
+interface:
+  display_name: "Kang Frontend Standard"
+  short_description: "高质量前端设计、实现、测试与交付标准"
+  default_prompt: "Use $kang-frontend-standard to design and deliver this frontend with strong visual judgment, mature references, responsive behavior, purposeful motion, and verified implementation quality."
