@@ -6,7 +6,7 @@ description: |
   Use when visual quality, UI structure, typography, components, motion, responsive behavior, performance, testing, or delivery quality matters.
 metadata:
   author: Kang
-  version: "0.4.1"
+  version: "0.5.0"
 ---
 
 # Kang Frontend Standard
@@ -43,6 +43,7 @@ Role language is not a substitute for evidence. Demonstrate design quality throu
 4. **Reuse mature work.** Inspect existing project components and reputable open-source design systems, component libraries, patterns, and examples before inventing equivalents. Reuse or adapt code when its license, dependency, and maintenance fit the project. Do not copy another product's brand, logo, private assets, or identity.
 5. **Keep evidence honest.** Separate concept, runnable prototype, tested behavior, preview deployment, and production capability.
 6. **Make the result dynamic when it helps.** Motion should communicate hierarchy, state, feedback, progression, or atmosphere. It should not be decoration without a purpose.
+7. **Preserve proven strengths.** Treat an existing interface as evidence, not as a blank canvas. Keep what already supports readability, trust, task completion, and product fit. A redesign succeeds through meaningful improvement, not visible difference alone.
 
 ## Project Constraints
 
@@ -53,6 +54,21 @@ Quality comes first. Do not reduce visual quality, interaction completeness, res
 When multiple approaches can achieve substantially the same visual, functional, responsive, accessibility, and maintenance quality, prefer the approach with fewer tokens, dependencies, moving parts, and long-term maintenance costs. If the lower-cost approach would noticeably weaken the result, preserve quality unless the user explicitly sets a budget, token, or time limit; then state the trade-off.
 
 Do not invent staffing costs, development quotes, budgets, or schedules. Consider them only when the user provides them and they materially affect the design choice.
+
+## Selective Improvement Gate
+
+Before redesigning an existing interface, evaluate the current version as a working baseline.
+
+Identify:
+
+- what already feels comfortable, credible, readable, and appropriate;
+- what weakens hierarchy, rhythm, interaction, responsiveness, or visual quality;
+- whether the task needs preservation, localized enhancement, structural refinement, or a full visual redesign;
+- which existing qualities must survive the iteration.
+
+Default to the smallest scope that produces a meaningful improvement. Do not replace an entire visual system merely because stronger references, newer components, or a more visible style are available. Treat references as sources of specific transferable qualities, not complete visual languages that must be imposed on the project.
+
+Use a full redesign when the user requests it, the current system materially fails the product, or local improvements cannot solve the structural problem. If a mature baseline remains stronger overall, preserve it and integrate only the improvements that survive comparison.
 
 ## Visual Direction Gate
 
@@ -114,6 +130,19 @@ A visual direction intended for aesthetic selection must be large enough to judg
 - If the available canvas makes concepts unreadable, show fewer directions per screen or provide separate full-size views. Never solve limited space by shrinking the interface until it can no longer be evaluated.
 
 Wireframes, mood boards, color swatches, and thumbnail sheets may support exploration, but label them as low fidelity. Do not present them as final visual directions.
+
+## Fair Before-and-After Comparison
+
+When judging whether a redesign is better:
+
+- compare the same content, evidence, assets, viewport, and page depth;
+- provide separate full-size views of the original and revised interfaces;
+- do not rely only on thumbnails, compressed collages, or a comparison toolbar that changes the available viewport;
+- preserve factual content and information volume unless content editing is explicitly in scope;
+- inspect both first-viewport impact and full-page reading rhythm;
+- capture final-state screenshots only after entrance motion has completed.
+
+Do not make the revised version appear stronger by removing difficult content, simplifying evidence, or presenting only its best section.
 
 ### When to skip or compress the pass
 
@@ -207,7 +236,22 @@ Before showing visual directions to the user, review them as a design critic rat
 
 Do not ask the user to choose among several weak concepts. Improve or replace them first.
 
+Do not confuse stylistic intensity with visual quality. Larger typography, stronger contrast, darker palettes, more editorial whitespace, more visible animation, or fashionable references are not improvements by themselves. Judge whether each change improves comfort, clarity, credibility, task fit, content comprehension, and sustained use.
+
 When presenting each direction, state its product and user rationale, inspected references and adapted qualities, structural idea, typography and material character, interaction and motion model, main strength and trade-off, and evidence level: mood study, high-fidelity concept, runnable prototype, or tested implementation.
+
+## Adoption Decision
+
+After review, classify meaningful proposed changes as:
+
+- retain from the existing version;
+- adopt from the revised version;
+- revise further;
+- reject.
+
+A user may prefer revised typography, hierarchy, motion, or section rhythm while rejecting the broader visual system. Treat this as a valid selective result, not a failed redesign. Integrate only the changes that survive comparison. If the revised direction is not materially better overall, preserve the existing design and report the narrower improvements that were validated.
+
+Treat an improvement as material when it advances at least one user-relevant goal without a meaningful regression in the others. When results are mixed or user preference remains uncertain, default to the existing baseline and ask before integrating broader visual changes.
 
 ## Responsive, Testing, and Delivery
 
