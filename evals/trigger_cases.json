@@ -7,6 +7,9 @@
     {"prompt": "在不降低页面质量的前提下，减少不必要的依赖和 Token 消耗，并完成响应式与性能检查", "should_trigger": true},
     {"prompt": "参考的开源设计站点打不开了，请继续找可靠替代来源，不要凭记忆声称已经借鉴", "should_trigger": true},
     {"prompt": "这个页面有入场动画，请在动效结束后截取最终状态，同时单独检查动态过程", "should_trigger": true},
+    {"prompt": "这个中文案例集已经比较成熟，只优化真正有提升的层级、节奏和动效，不要为了重构而整套换风格", "should_trigger": true},
+    {"prompt": "用相同内容和完整页面分别展示改版前后效果，公平比较，不要使用缩略拼盘或挤占页面空间的切换器", "should_trigger": true},
+    {"prompt": "我只喜欢新版的字体和滚动节奏，不喜欢它的整体视觉系统，请选择性合并而不是全盘采用", "should_trigger": true},
     {"prompt": "把这个页面的按钮颜色改成绿色", "should_trigger": true},
     {"prompt": "生成一张装修风格海报", "should_trigger": false},
     {"prompt": "修复一个 Node.js 接口的错误码判断", "should_trigger": false}
