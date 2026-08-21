@@ -6,7 +6,7 @@ description: |
   Use when visual quality, UI structure, typography, components, motion, responsive behavior, performance, testing, or delivery quality matters.
 metadata:
   author: Kang
-  version: "0.5.0"
+  version: "0.6.0"
 ---
 
 # Kang Frontend Standard
@@ -107,6 +107,32 @@ Before producing visual directions for a substantial design task, inspect releva
 - Do not claim that a direction is inspired by a source unless that source was actually inspected.
 - Consolidate references into one review surface when possible. Do not open a large number of visible browser tabs merely to demonstrate research.
 
+For authenticated B2B SaaS, CRM, operations, workflow, approval, and data-management surfaces, route the reference question before choosing a source:
+
+| Surface | Study first | Primary question |
+| --- | --- | --- |
+| Authenticated home or workbench | Cloudscape, Fluent, local product evidence | What needs attention now and where does work begin? |
+| Resource collection or data table | Cloudscape, Carbon, Ant Design | How does a user find, compare, select, and act on records? |
+| Record review or detail | Cloudscape, Atlassian, local product evidence | Should context remain visible while inspecting or deciding? |
+| Configuration or admin | Cloudscape, Fluent, Ant Design | How are settings changed safely and explained? |
+| Collaboration, tasks, comments, activity | Atlassian, Fluent, local product evidence | How are ownership, changes, and conflicts understood? |
+
+Mobbin and SaaSUI are optional references for shipped-product flows such as onboarding, settings, filtering, dialogs, drawers, and multi-step tasks. Mobbin MCP is paid and OAuth-gated; it is never a required dependency. Refero remains primarily a marketing, product-introduction, and editorial reference. Prefer official documentation, examples, and repositories for public design systems. Learn interaction mechanisms and rationale; do not copy brand identity, logos, private screenshots, or proprietary UI.
+
+### Enterprise SaaS workbench routing
+
+When a surface supports repeated authenticated work, design the task path in addition to the visual direction. A workbench should make clear where the user is, what needs attention, what can be done, what evidence or scope applies, and what changed after an action.
+
+- Use primary navigation for stable product areas, not temporary filters or one-off actions.
+- Show a concise page title and scope context before the collection, workflow, or configuration.
+- Use text search for known terms; simple selects for one or two stable properties; composable property filters only when users need multiple values, operators, or saved queries.
+- Use tables when comparing records matters; use lists or cards when narrative scanning matters more than columns.
+- Use a split panel or drawer for contextual inspection that should preserve collection context; use a dedicated detail page for long histories, deep subsections, or multiple independent tasks; use a modal only for a short blocking decision or bounded form.
+- Introduce row selection only for real multi-record actions. Batch mode must show selected count, expose only actions valid for all selected records, disable conflicting row actions, and provide an explicit exit path.
+- A drawer must have one clear use case. Avoid layering competing panels; simplify to a page or modal when that better matches the user's task.
+
+Do not force these patterns onto marketing pages, portfolios, customer-facing forms, or lightweight tools. Choose the least complex interaction that supports the actual task.
+
 ### Reference access fallback
 
 If a preferred reference cannot be opened, do not silently abandon reference research, repeatedly open visible tabs, bypass access controls, or claim that the unavailable source was inspected. Use this order until enough reliable evidence exists:
@@ -204,6 +230,8 @@ Fonts, sizes, colors, and spacing are decisions to make from this reasoning. Nev
 - Give controls real behavior and complete states: disabled, pending, success, failure, empty, and recovery where relevant.
 - Use semantic HTML, keyboard access, visible focus, readable contrast, accessible names and labels, understandable validation and recovery, appropriate announcements for dynamic state, and reduced-motion handling.
 - Preserve functionality at reasonable zoom and narrow widths. Test critical flows with keyboard navigation and, when the project risk justifies it, a screen reader or accessibility audit.
+- For workbench flows, verify the primary keyboard path through navigation, filters, collection, detail, confirmation, and return state. Check that selection, filters, sorting, pagination, and collection context are preserved or deliberately reset with a visible rationale.
+- For each applicable workbench feature, design and test initial/empty, loading, no-results, validation failure, permission restriction, save-pending, success, server failure, and conflict/stale-data states. Do not use a toast as the only representation of an actionable state.
 - Treat WCAG 2.2 as the current reference when formal accessibility conformance matters; define the required conformance level from the product, legal, and user context rather than claiming compliance from a superficial check.
 - Implement dark mode, theme switching, multi-brand theming, or internationalization when the product requires them, not as universal features. Even when they are out of scope, avoid structures that unnecessarily block future text expansion, locale changes, or theme adaptation.
 - Keep secrets, private data, internal payloads, and debugging details out of public UI and client bundles.

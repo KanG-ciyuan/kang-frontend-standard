@@ -10,6 +10,10 @@
     {"prompt": "这个中文案例集已经比较成熟，只优化真正有提升的层级、节奏和动效，不要为了重构而整套换风格", "should_trigger": true},
     {"prompt": "用相同内容和完整页面分别展示改版前后效果，公平比较，不要使用缩略拼盘或挤占页面空间的切换器", "should_trigger": true},
     {"prompt": "我只喜欢新版的字体和滚动节奏，不喜欢它的整体视觉系统，请选择性合并而不是全盘采用", "should_trigger": true},
+    {"prompt": "设计一个登录后的 B2B SaaS 工作台，先研究侧边栏、表格、筛选、详情抽屉和批量操作的完整任务路径", "should_trigger": true},
+    {"prompt": "这个 CRM 列表应该用简单筛选还是属性筛选？请根据数据复杂度和用户任务判断", "should_trigger": true},
+    {"prompt": "请为这个后台补齐空状态、加载、权限、冲突、保存失败和批量操作状态，并在浏览器中验证", "should_trigger": true},
+    {"prompt": "Mobbin 需要登录打不开了，请用公开设计系统和本地现有组件继续，不要假装看过 Mobbin", "should_trigger": true},
     {"prompt": "把这个页面的按钮颜色改成绿色", "should_trigger": true},
     {"prompt": "生成一张装修风格海报", "should_trigger": false},
     {"prompt": "修复一个 Node.js 接口的错误码判断", "should_trigger": false}
