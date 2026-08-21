@@ -8,17 +8,19 @@ const triggerCases = JSON.parse(readFileSync(resolve(root, 'evals/trigger_cases.
 const issues = [];
 
 for (const marker of [
-  'version: "0.5.0"',
+  'version: "0.6.0"',
   'Preserve proven strengths.',
   '## Selective Improvement Gate',
   '## Fair Before-and-After Comparison',
   '## Adoption Decision',
   'Do not confuse stylistic intensity with visual quality.',
+  '### Enterprise SaaS workbench routing',
+  'For workbench flows, verify the primary keyboard path',
 ]) {
   if (!skill.includes(marker)) issues.push(`SKILL.md missing: ${marker}`);
 }
 
-if (!readme.includes('v0.5.0')) issues.push('README.md version is not v0.5.0');
+if (!readme.includes('v0.6.0')) issues.push('README.md version is not v0.6.0');
 
 for (const phrase of ['选择性合并', '公平比较', '不要为了重构而整套换风格']) {
   if (!triggerCases.cases.some(({ prompt, should_trigger }) => should_trigger && prompt.includes(phrase))) {
@@ -30,5 +32,5 @@ if (issues.length) {
   issues.forEach((issue) => console.error(`FAIL: ${issue}`));
   process.exitCode = 1;
 } else {
-  console.log('PASS: v0.5.0 selective-improvement rules and trigger cases are consistent');
+  console.log('PASS: v0.6.0 enterprise workbench rules and trigger cases are consistent');
 }
